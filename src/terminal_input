@@ -1,0 +1,54 @@
+#Don't have puzzle 1 so I put a placeholder import and both commented out cause I'm on jupyer notebook, should be good for pycharm
+#import puzzle1
+#import tower_stacking
+
+
+#asks for and returns the user input for what puzzle they want to solve
+def pick_algo():
+    algo = input("Which Puzzle Are You Solving: ")
+    return algo
+
+#asks for and returns the user input for what file path they want to read
+def file_name():
+    file = input("Name of File to Read: ")
+    return file
+
+#asks for and returns the user input for how long in seconds they want to run it for
+def run_time():
+    time = input("Time to Run: ")
+    return time
+
+
+#Ask the user for their puzzle number
+algoNum = pick_algo()
+
+
+#if statement to determine what puzzle was selected
+if algoNum == str(1):
+    #ask for the file path and run time for puzzle 1
+    filePath = file_name()
+    runTime = run_time()
+    
+    #Opens the file and runs the puzzle 1 on said file for said time.
+    #f = open(filePath)
+    #t = puzzle1.function(f)
+    #t.run_for_n_time(runTime)
+    
+    #Currently no file for puzzle 1 so I had it print this, delete when implemented
+    print("Not Implemented Yet")
+elif algoNum == str(2):
+    #ask for the file path and run time for puzzle 2
+    filePath = file_name()
+    runTime = run_time()
+    
+    #Opens the file and runs the puzzle 2 on said file for said time.
+    f = open(filePath)
+    
+    #commented out as I'm running in jupyter and not importing, should work for pycharm
+    #t = tower_stacking.tower_stacker_genetics(f)
+    
+    t = tower_stacker_genetics(f)
+    t.run_for_n_time(runTime)
+else:
+    #End the program if the input is neither 1 or 2
+    print("No Such Puzzle")
